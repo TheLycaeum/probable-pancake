@@ -1,7 +1,7 @@
 import tweepy
 
 def get_api(KEY1, KEY2, KEY3, KEY4):
-  auth = tweepy.OAuthHandler(KEY1, Key2])
+  auth = tweepy.OAuthHandler(KEY1, KEY2)
   auth.set_access_token(KEY3, KEY4)
   return tweepy.API(auth)
 
