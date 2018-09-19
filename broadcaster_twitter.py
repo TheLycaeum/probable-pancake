@@ -16,8 +16,7 @@ def main():
 
   api = get_api(cfg)
   tweet = "Hi, This is Nipun!"
-  status = api.update_status(status=tweet) 
-  # Yes, tweet is called 'status' rather confusing
+  status = api.update_status(tweet) 
 
 if __name__ == "__main__":
   main()
