@@ -7,13 +7,6 @@ def get_api(cfg):
 
 def main():
   
-  cfg = { 
-    "consumer_key"        : "M8VYWKswCUQW7EqnzeabStIXf",
-    "consumer_secret"     : "v0p7rsJNAddbRu1SKebvrj7b9wtTs3C5aMWCychBxB2MZWaMoS",
-    "access_token"        : "201037788-ScByvRNzOiCbGIhvATmqszz9hfHwhKx5B0dFHki1",
-    "access_token_secret" : "5QEbE3SCpxrIXEDXFshe7aU7DTEEjznxlos2GQ00POf6l" 
-    }
-
   api = get_api(cfg)
   tweet = "Hi, This is Nipun!"
   status = api.update_status(tweet) 
