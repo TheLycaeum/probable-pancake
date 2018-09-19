@@ -5,11 +5,18 @@ import json
 global loaded_config
 
 def load_config():
-    wrapper = open("./config.json", "r+")
-    data = wrapper.readline()
-    global loaded_config
-    loaded_config = json.loads(data)
-    return loaded_config
+    try:
+        wrapper = open("./config.json", "r+")
+        data = wrapper.readline()
+        global loaded_config
+        loaded_config = json.loads(data)
+        return loaded_config
+    except:
+        dict2json.clear_config_file()
+        wrapper = open("./config.json", "r+")
+        data = wrapper.readline()
+        loaded_config = json.loads(data)
+        return loaded_config
 
 def twitter_broadcast(KEY1, KEY2, KEY3, KEY4, message):
     broadcaster_twitter.tweet_message(KEY1, KEY2, KEY3, KEY4, message)
