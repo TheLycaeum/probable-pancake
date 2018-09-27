@@ -3,8 +3,6 @@
 import sys
 import dispatcher
 
-
-
 def return_msg_from_cmdline():
     message = sys.argv[1]
     return message
