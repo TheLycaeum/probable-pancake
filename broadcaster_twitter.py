@@ -8,4 +8,4 @@ def get_api(KEY1, KEY2, KEY3, KEY4):
 def tweet_message(KEY1, KEY2, KEY3, KEY4, msg):
   api = get_api(KEY1, KEY2, KEY3, KEY4)
   status = api.update_status(status = msg)
-
+  return "Done"
