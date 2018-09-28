@@ -1,8 +1,13 @@
 import error_twitter
-import broadcaster_twitter
+from channels import broadcaster_twitter
 import dict2json
 import json
 global loaded_config
+import sys
+import os
+from os import listdir
+from os.path import isfile, join
+
 
 def load_config():
     try:
@@ -17,6 +22,13 @@ def load_config():
         data = wrapper.readline()
         loaded_config = json.loads(data)
         return loaded_config
+
+
+def file_list():
+    mypath = os.getcwd() + '/channels'
+    onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+    return onlyfiles
+
 
 def twitter_broadcast(KEY1, KEY2, KEY3, KEY4, message):
     broadcaster_twitter.tweet_message(KEY1, KEY2, KEY3, KEY4, message)
