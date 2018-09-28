@@ -1,10 +1,6 @@
 .pytest_cache/
 __pycache__/
 
-#broadcast.py#
-#test_cmd.py#
-.#broadcast.py
-broadcast.py~
-pancake/
-test.py
-test.py~
+#*#
+.#*
+*~
